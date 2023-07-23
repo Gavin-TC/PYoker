@@ -61,8 +61,9 @@ class AIPlayer(User):
         time.sleep(1)
 
     def EvaluateHand(self):
+        
+        
         return hands
-        pass
 
 
 class Player(User):
