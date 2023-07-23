@@ -1,18 +1,17 @@
 import time
-from deck import Deck
 
 class User:
     chips = 100
     bet = 0
-    deck: list = []
+    cards: list = []
 
-    deckObj: Deck = None
+    deckObj = None
 
     def __init__(self, deckObj):
         self.deckObj = deckObj
 
-    def ReceiveCards(self, cards):
-        pass
+    def ReceiveCard(self, card):
+        self.cards.append(card)
 
     def Check(self):
         pass
@@ -48,7 +47,7 @@ class AIPlayer(User):
 
     def __init__(self, riskiness = 50):
         self.riskiness = 50
-        self.state = states[-1]
+        self.state = self.states[-1]
 
     '''
     The AI will make a decision based on the river
@@ -61,7 +60,6 @@ class AIPlayer(User):
         time.sleep(1)
 
     def EvaluateHand(self):
-        return hands
         pass
 
 
